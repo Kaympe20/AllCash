@@ -1,8 +1,24 @@
-# AllCash
+# allcash
 
-<details open>
-<summary>Background</summary>
+## Project setup
+```
+npm install
+```
 
-I came up with this idea as I was getting my dad to switch to open source tools to save money. I tried finding an open alternative to EveryDollar, and it stumped me. EveryDollar has so many users, yet there isn't even an open web-based budgeting app, let alone one that supports connecting with banking apps and/or receipts. **It is for this reason that I decided to make *AllCash*, the open source budgetting app to help you put all of your cash to work.**
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-</details>
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
