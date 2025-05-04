@@ -17,15 +17,18 @@
 <script lang="ts">
 </script>
 
-<style>
+<style scoped>
 .sidebar {
-  width: 300px;
-  height: 100vh;
-  padding: 20px;
-  background-color: lightblue;
-  flex-shrink: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 20px;
+    background-color: lightblue;
+    flex-shrink: 0;
 }
 .logo {
-  width: 90%;
+    width: 90%;
+}
+* {
+    text-align: center;
 }
 </style>
