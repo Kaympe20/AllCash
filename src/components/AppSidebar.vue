@@ -19,16 +19,16 @@
 
 <style scoped>
 .sidebar {
-    width: 300px;
+    width: var(--sidebar-width);
     height: 100vh;
     padding: 20px;
     background-color: lightblue;
-    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
 }
 .logo {
     width: 90%;
-}
-* {
-    text-align: center;
 }
 </style>
