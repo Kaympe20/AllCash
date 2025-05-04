@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <AppSidebar></AppSidebar>
-
+  <div class="app-container">
+    <AppSidebar></AppSidebar>
+    <AppContent></AppContent>
+  </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import AppSidebar from './components/AppSidebar.vue'
+import AppContent from './components/content/AppContent.vue';
 
 export default {
   name: 'App',
   components: {
-    AppSidebar
+    AppSidebar,
+    AppContent
   }
 }
 </script>
@@ -21,8 +24,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
 }
 </style>
