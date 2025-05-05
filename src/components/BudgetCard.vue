@@ -3,10 +3,10 @@
         <div class="card">
             <table>
                 <tr>
-                    <th><h2>{{ budgetName }}</h2></th>
+                    <th><h1>{{ budgetName }}</h1></th>
                     <th>Planned</th>
-                    <th v-if="planned">Spent</th>
-                    <th v-else>Spent</th>
+                    <th v-if="spent">Spent</th>
+                    <th v-else>Recieved</th>
                 </tr>
             </table>
         </div>
@@ -18,7 +18,7 @@ import { ref } from 'vue';
 
 // Test variables until reactivity is set up
 const budgetName = ref('Income');
-const planned = true;
+const spent = true;
 </script>
 
 <style scoped>
