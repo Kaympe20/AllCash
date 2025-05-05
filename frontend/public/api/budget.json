@@ -3,11 +3,13 @@
         "parts": [
             {
                 "name": "Salary",
-                "amount": 5000
+                "amount": 5000,
+                "remaining": 50
             },
             {
                 "name": "Side Hustle",
-                "amount": 200
+                "amount": 200,
+                "remaining": 50
             }
         ]
     },
@@ -18,11 +20,13 @@
             "parts": [
                 {
                     "name": "Rent",
-                    "amount": 5000
+                    "amount": 5000,
+                    "remaining": 50
                 },
                 {
                     "name": "Utilities",
-                    "amount": 300
+                    "amount": 300,
+                    "remaining": 50
                 }
             ]
         },
@@ -31,11 +35,13 @@
             "parts": [
                 {
                     "name": "Food",
-                    "amount": 400
+                    "amount": 400,
+                    "remaining": 50
                 },
                 {
                     "name": "Household Supplies",
-                    "amount": 100
+                    "amount": 100,
+                    "remaining": 50
                 }
             ]
         },
@@ -44,11 +50,13 @@
             "parts": [
                 {
                     "name": "Gas",
-                    "amount": 150
+                    "amount": 150,
+                    "remaining": 50
                 },
                 {
                     "name": "Public Transport",
-                    "amount": 50
+                    "amount": 50,
+                    "remaining": 50
                 }
             ]
         }
