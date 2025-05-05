@@ -1,19 +1,19 @@
-FROM node:18-alpine AS build
+FROM oven/bun AS build
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
 COPY package.json ./
 
 # Install dependencies
-RUN npm install
+RUN bun install
 
 # Copy the rest of the application code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN bun run build
 
 # Use a lightweight web server to serve the built files
 FROM nginx:alpine
