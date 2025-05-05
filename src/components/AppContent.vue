@@ -1,8 +1,12 @@
 <template>
     <div class="content">
-        <h1>This is a lot of text to see if its getting stuck behind the taskbar.</h1>
+        <BudgetCard></BudgetCard>
     </div>
 </template>
+
+<script lang="ts" setup>
+import BudgetCard from './BudgetCard.vue'
+</script>
 
 <style scoped>
 .content {

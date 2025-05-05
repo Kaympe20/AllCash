@@ -18,7 +18,7 @@ export default {
 
 <style>
 :root {
-  --sidebar-width: 300px;
+  --sidebar-width: min(20vw, 200px);
 }
 
 #app {
