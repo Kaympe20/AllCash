@@ -1,6 +1,8 @@
 <template>
     <div class="content">
-        <BudgetCard></BudgetCard>
+        <BudgetCard
+            budgetName="Income"
+        ></BudgetCard>
     </div>
 </template>
 

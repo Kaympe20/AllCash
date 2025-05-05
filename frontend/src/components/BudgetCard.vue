@@ -8,17 +8,28 @@
                     <th v-if="spent">Spent</th>
                     <th v-else>Recieved</th>
                 </tr>
+                <tr>
+                    
+                </tr>
             </table>
         </div>
     </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
-
-// Test variables until reactivity is set up
-const budgetName = ref('Income');
-const spent = true;
+<script lang="ts">
+export default {
+    name: 'BudgetCard',
+    props: {
+        budgetName: {
+            type: String,
+            required: true
+        },
+        spent: {
+            type: Boolean,
+            default: false
+        }
+    }
+}
 </script>
 
 <style scoped>
