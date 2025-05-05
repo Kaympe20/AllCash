@@ -5,7 +5,7 @@
 
 <script>
 import AppSidebar from './components/AppSidebar.vue'
-import AppContent from './components/content/AppContent.vue';
+import AppContent from './components/AppContent.vue';
 
 export default {
   name: 'App',
