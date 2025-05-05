@@ -22,14 +22,15 @@
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
-    padding: 20px;
     background-color: lightblue;
+    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
     text-align: center;
 }
 .logo {
-    width: 90%;
+    max-width: 80%;
+    max-height: 20vh;
 }
 </style>

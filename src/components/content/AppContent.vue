@@ -8,7 +8,8 @@
 .content {
     padding: 20px;
     text-align: left;
-    width: calc(100% - var(--sidebar-width));
-    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width) - 40px - 30px);
+    margin-left: calc(30px + var(--sidebar-width));
+    text-align: center;
 }
 </style>
