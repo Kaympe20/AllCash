@@ -1,0 +1,12 @@
+{
+    "parts": [
+        {
+            "name": "Salary",
+            "amount": 5000
+        },
+        {
+            "name": "Side Hustle",
+            "amount": 200
+        }
+    ]
+}

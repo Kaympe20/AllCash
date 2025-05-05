@@ -1,0 +1,43 @@
+{
+    "categories": [
+        {
+            "name": "Bills",
+            "parts": [
+                {
+                    "name": "Rent",
+                    "amount": 5000
+                },
+                {
+                    "name": "Utilities",
+                    "amount": 300
+                }
+            ]
+        },
+        {
+            "name": "Groceries",
+            "parts": [
+                {
+                    "name": "Food",
+                    "amount": 400
+                },
+                {
+                    "name": "Household Supplies",
+                    "amount": 100
+                }
+            ]
+        },
+        {
+            "name": "Transportation",
+            "parts": [
+                {
+                    "name": "Gas",
+                    "amount": 150
+                },
+                {
+                    "name": "Public Transport",
+                    "amount": 50
+                }
+            ]
+        }
+    ]
+}
