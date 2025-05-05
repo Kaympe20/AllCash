@@ -7,4 +7,4 @@ I came up with this idea as I was getting my dad to switch to open source tools 
 
 </details>
 
-![](https://hackatime-badge.hackclub.com/U07HY92M9GA/AllCash)
+<a href="https://slack.com/app_redirect?channel=U07HY92M9GA"><img src="https://hackatime-badge.hackclub.com/U07HY92M9GA/AllCash"></a>
