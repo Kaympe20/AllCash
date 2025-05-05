@@ -3,7 +3,7 @@
         <div class="card">
             <table>
                 <tr>
-                    <th><h1>{{ budgetName }}</h1></th>
+                    <th>{{ budgetName }}</th>
                     <th>Planned</th>
                     <th v-if="spent">Spent</th>
                     <th v-else>Recieved</th>
@@ -35,5 +35,8 @@ const spent = true;
 table {
     width: 100%;
     border-spacing: 30px;
+}
+th {
+    font-size: max(2vw, 2vh);
 }
 </style>
