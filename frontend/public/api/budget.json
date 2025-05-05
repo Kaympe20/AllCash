@@ -1,5 +1,18 @@
 {
-    "categories": [
+    "income": {
+        "parts": [
+            {
+                "name": "Salary",
+                "amount": 5000
+            },
+            {
+                "name": "Side Hustle",
+                "amount": 200
+            }
+        ]
+    },
+    "expenses": {
+        "categories": [
         {
             "name": "Bills",
             "parts": [
@@ -40,4 +53,5 @@
             ]
         }
     ]
+    }
 }
