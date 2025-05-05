@@ -8,9 +8,11 @@
 
         </div>
         <ul class="sidebar-menu">
+        <!--
         <li v-for="item in menuItems" :key="item.id" class="sidebar-item">
             <a :href="item.link">{{ item.name }}</a>
         </li>
+        -->
         </ul>
     </div>
 </template>
@@ -28,6 +30,7 @@
     top: 0;
     left: 0;
     text-align: center;
+    border-right: rgb(66, 67, 73) 6px solid;
 }
 .logo {
     max-width: 80%;
