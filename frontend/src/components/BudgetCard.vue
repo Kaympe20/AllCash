@@ -8,12 +8,20 @@
                     <th v-if="spent">Spent</th>
                     <th v-else>Received</th>
                 </tr>
-                <tr v-for="(budget, index) in budgetArray" :key="index">
-                    <td>{{ budget.title }}</td>
-                    <td>{{ formatCurrency(budget.planned) }}</td>
-                    <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
-                    <td v-else>{{ formatCurrency(budget.remaining) }}</td>
+                <tr class="divider-row">
+                    <td colspan="3"><hr /></td>
                 </tr>
+                <template v-for="(budget, index) in budgetArray" :key="index">
+                    <tr>
+                        <td>{{ budget.title }}</td>
+                        <td>{{ formatCurrency(budget.planned) }}</td>
+                        <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
+                        <td v-else>{{ formatCurrency(budget.remaining) }}</td>
+                    </tr>
+                    <tr v-if="index < budgetArray.length" class="divider-row">
+                        <td colspan="3"><hr /></td>
+                    </tr>
+                </template>
                 <tr class="total-row">
                     <td><strong>Total</strong></td>
                     <td><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
@@ -98,5 +106,10 @@ td {
 }
 .total-row td {
     font-weight: bold;
+}
+.divider-row hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
 }
 </style>
