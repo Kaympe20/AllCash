@@ -1,6 +1,6 @@
 # AllCash
 
-## Background
+### Background
 <details open>
 <summary></summary>
 
