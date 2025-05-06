@@ -4,7 +4,7 @@ import App from './App.vue'
 
 createApp(App).mount('#app')
 
-class BudgetElement {
+export class BudgetElement {
     title: string;
     planned: number;
     remaining: number;

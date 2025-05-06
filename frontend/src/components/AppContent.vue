@@ -1,14 +1,24 @@
+<script lang="ts" setup>
+import BudgetCard from './BudgetCard.vue'
+import { BudgetElement } from '../main.ts'
+
+/*
+const budgetArray: BudgetElement[] = [
+    new BudgetElement('Salary', 5000, 3000),
+    new BudgetElement('Freelance', 2000, 1000)
+]
+*/
+
+</script>
+
 <template>
     <div class="content">
         <BudgetCard
             budgetName="Income"
+            :budgetArray="budgetArray"
         ></BudgetCard>
     </div>
 </template>
-
-<script lang="ts" setup>
-import BudgetCard from './BudgetCard.vue'
-</script>
 
 <style scoped>
 .content {

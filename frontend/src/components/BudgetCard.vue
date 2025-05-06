@@ -27,6 +27,10 @@ export default {
         spent: {
             type: Boolean,
             default: false
+        },
+        budgetArray: {
+            type: Array,
+            default: () => []
         }
     }
 }
