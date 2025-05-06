@@ -7,17 +7,27 @@
         <p>The <i>only</i> FOSS EveryDollar Alternative</p>
 
         </div>
-        <ul class="sidebar-menu">
-        <!--
-        <li v-for="item in menuItems" :key="item.id" class="sidebar-item">
-            <a :href="item.link">{{ item.name }}</a>
-        </li>
-        -->
-        </ul>
+        <div class="sidebar-menu">
+            <a v-for="(item, index) in menuItems" :key="index"
+                class="sidebar-item"
+                :href="item.link"
+            >
+                {{ item.name }}
+            </a>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
+export default {
+    data() {
+        return {
+            menuItems: [
+                { name: 'Budget', link: '/budget' },
+            ]
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -36,5 +46,27 @@
     max-width: 80%;
     max-height: 20vh;
     margin: 0 auto;
+}
+.sidebar-menu {
+    padding-left: 0;
+    margin: 0;
+}
+.sidebar-item {
+    list-style: none;
+    margin: 20px auto;
+    width: 85%;
+    border-radius: 15px;
+    background-color: white;
+    aspect-ratio: 3/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    transition-duration: 0.4s;
+}
+.sidebar-item:hover {
+    background-color: lightgray;
 }
 </style>
