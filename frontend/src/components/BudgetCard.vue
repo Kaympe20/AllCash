@@ -17,6 +17,15 @@
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue'
+
+
+interface BudgetElement {
+    title: string;
+    planned: number;
+    remaining: number;
+}
+
 export default {
     name: 'BudgetCard',
     props: {
@@ -29,7 +38,7 @@ export default {
             default: false
         },
         budgetArray: {
-            type: Array,
+            type: Array as PropType<BudgetElement[]>,
             default: () => []
         }
     }
