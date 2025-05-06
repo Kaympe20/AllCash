@@ -54,7 +54,7 @@ export default {
 .sidebar-item {
     list-style: none;
     margin: 20px auto;
-    width: 85%;
+    width: 95%;
     border-radius: 15px;
     background-color: white;
     aspect-ratio: 3/1;
