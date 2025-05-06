@@ -6,7 +6,6 @@ const budgetArray: BudgetElement[] = [
     new BudgetElement('Salary', 5000, 3000),
     new BudgetElement('Freelance', 2000, 1000)
 ]
-
 </script>
 
 <template>
@@ -14,7 +13,6 @@ const budgetArray: BudgetElement[] = [
         <BudgetCard
             budgetName="Income"
             :budgetArray="budgetArray"
-            spent="true"
         ></BudgetCard>
     </div>
 </template>

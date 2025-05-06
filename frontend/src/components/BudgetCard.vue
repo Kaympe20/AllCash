@@ -10,9 +10,9 @@
                 </tr>
                 <tr v-for="(budget, index) in budgetArray" :key="index">
                     <td>{{ budget.title }}</td>
-                    <td>{{ budget.planned }}</td>
-                    <td v-if="spent">{{ budget.planned - budget.remaining }}</td>
-                    <td v-else>{{ budget.remaining }}</td>
+                    <td>{{ formatCurrency(budget.planned) }}</td>
+                    <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
+                    <td v-else>{{ formatCurrency(budget.remaining) }}</td>
                 </tr>
             </table>
         </div>
@@ -44,6 +44,15 @@ export default {
             type: Array as PropType<BudgetElement[]>,
             default: () => []
         }
+    },
+    methods: {
+        formatCurrency(amount: number): string {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2
+            }).format(amount);
+        }
     }
 }
 </script>
@@ -65,5 +74,8 @@ table {
 }
 th {
     font-size: max(2vw, 2vh);
+}
+td {
+    font-size: max(1.5vw, 1.5vh);
 }
 </style>
