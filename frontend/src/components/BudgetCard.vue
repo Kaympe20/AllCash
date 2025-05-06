@@ -14,6 +14,12 @@
                     <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
                     <td v-else>{{ formatCurrency(budget.remaining) }}</td>
                 </tr>
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
+                    <td v-if="spent"><strong>{{ formatCurrency(totalSpent) }}</strong></td>
+                    <td v-else><strong>{{ formatCurrency(totalReceived) }}</strong></td>
+                </tr>
             </table>
         </div>
     </div>
@@ -43,6 +49,17 @@ export default {
         budgetArray: {
             type: Array as PropType<BudgetElement[]>,
             default: () => []
+        }
+    },
+    computed: {
+        totalPlanned(): number {
+            return this.budgetArray.reduce((sum, budget) => sum + budget.planned, 0);
+        },
+        totalSpent(): number {
+            return this.budgetArray.reduce((sum, budget) => sum + (budget.planned - budget.remaining), 0);
+        },
+        totalReceived(): number {
+            return this.budgetArray.reduce((sum, budget) => sum + budget.remaining, 0);
         }
     },
     methods: {
@@ -78,5 +95,8 @@ th {
 }
 td {
     font-size: max(1.5vw, 1.5vh);
+}
+.total-row td {
+    font-weight: bold;
 }
 </style>
