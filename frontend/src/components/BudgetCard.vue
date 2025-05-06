@@ -63,6 +63,7 @@ export default {
     min-height: 15vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     padding: 20px;
     background-color: white;
     border-radius: 30px;
