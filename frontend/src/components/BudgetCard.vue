@@ -6,7 +6,7 @@
                     <th>{{ budgetName }}</th>
                     <th>Planned</th>
                     <th v-if="spent">Spent</th>
-                    <th v-else>Recieved</th>
+                    <th v-else>Received</th>
                 </tr>
                 <tr>
                     
