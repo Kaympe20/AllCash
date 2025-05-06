@@ -23,7 +23,7 @@ export default {
     data() {
         return {
             menuItems: [
-                { name: 'Budget', link: '/budget' },
+                { name: 'Budget', link: '/' },
             ]
         }
     }
