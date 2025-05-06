@@ -14,6 +14,7 @@ const budgetArray: BudgetElement[] = [
         <BudgetCard
             budgetName="Income"
             :budgetArray="budgetArray"
+            spent="true"
         ></BudgetCard>
     </div>
 </template>

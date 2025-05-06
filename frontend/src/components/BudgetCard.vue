@@ -8,8 +8,11 @@
                     <th v-if="spent">Spent</th>
                     <th v-else>Received</th>
                 </tr>
-                <tr>
-                    
+                <tr v-for="(budget, index) in budgetArray" :key="index">
+                    <td>{{ budget.title }}</td>
+                    <td>{{ budget.planned }}</td>
+                    <td v-if="spent">{{ budget.planned - budget.remaining }}</td>
+                    <td v-else>{{ budget.remaining }}</td>
                 </tr>
             </table>
         </div>
