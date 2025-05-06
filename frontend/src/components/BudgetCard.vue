@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .card {
     width: 80%;
-    min-height: 40vh;
+    min-height: 15vh;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
