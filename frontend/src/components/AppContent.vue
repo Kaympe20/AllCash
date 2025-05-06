@@ -16,10 +16,17 @@ const budgetCards: BudgetCardClass[] = [
         ]
     ),
     new BudgetCardClass(
-        "Expenses",
+        "Food",
         false,
         [
-            new BudgetElement('Food', 5000, 3000)
+            new BudgetElement('Groceries', 5000, 3000)
+        ]
+    ),
+    new BudgetCardClass(
+        "Housing",
+        false,
+        [
+            new BudgetElement('Rent', 3000, 1000)
         ]
     )
 ]
