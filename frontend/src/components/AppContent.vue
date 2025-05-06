@@ -4,7 +4,10 @@ import { BudgetElement } from '../classes/BudgetElement'
 
 const budgetArray: BudgetElement[] = [
     new BudgetElement('Salary', 5000, 3000),
-    new BudgetElement('Freelance', 2000, 1000)
+    new BudgetElement('Freelance', 2000, 1000),
+    new BudgetElement('Investments', 1500, 500),
+    new BudgetElement('Side Hustle', 800, 200),
+    new BudgetElement('Gifts', 300, 100)
 ]
 </script>
 
