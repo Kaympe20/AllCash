@@ -1,6 +1,8 @@
 <template>
-  <AppSidebar></AppSidebar>
-  <AppContent></AppContent>
+  <div id="app">
+    <AppSidebar></AppSidebar>
+    <AppContent></AppContent>
+  </div>
 </template>
 
 <script>
