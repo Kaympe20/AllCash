@@ -3,30 +3,30 @@
         <div class="card">
             <table>
                 <tr>
-                    <th style="text-align: left; width: 50%;">{{ budgetName }}</th>
-                    <th style="text-align: right; width: 25%;">Planned</th>
-                    <th v-if="spent" style="text-align: right; width: 25%;">Spent</th>
-                    <th v-else style="text-align: right; width: 25%;">Received</th>
+                    <th>{{ budgetName }}</th>
+                    <th>Planned</th>
+                    <th v-if="spent">Spent</th>
+                    <th v-else>Received</th>
                 </tr>
                 <tr class="divider-row">
                     <td colspan="3"><hr /></td>
                 </tr>
                 <template v-for="(budget, index) in budgetArray" :key="index">
                     <tr>
-                        <td style="text-align: left;">{{ budget.title }}</td>
-                        <td style="text-align: right;">{{ formatCurrency(budget.planned) }}</td>
-                        <td v-if="spent" style="text-align: right;">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
-                        <td v-else style="text-align: right;">{{ formatCurrency(budget.remaining) }}</td>
+                        <td>{{ budget.title }}</td>
+                        <td>{{ formatCurrency(budget.planned) }}</td>
+                        <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
+                        <td v-else>{{ formatCurrency(budget.remaining) }}</td>
                     </tr>
                     <tr v-if="index < budgetArray.length" class="divider-row">
                         <td colspan="3"><hr /></td>
                     </tr>
                 </template>
                 <tr class="total-row">
-                    <td style="text-align: left;"><strong>Total</strong></td>
-                    <td style="text-align: right;"><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
-                    <td v-if="spent" style="text-align: right;"><strong>{{ formatCurrency(totalSpent) }}</strong></td>
-                    <td v-else style="text-align: right;"><strong>{{ formatCurrency(totalReceived) }}</strong></td>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
+                    <td v-if="spent"><strong>{{ formatCurrency(totalSpent) }}</strong></td>
+                    <td v-else><strong>{{ formatCurrency(totalReceived) }}</strong></td>
                 </tr>
             </table>
         </div>
@@ -110,5 +110,17 @@ td {
     border: none;
     border-top: 1px solid #ccc;
     margin: 0;
+}
+td:nth-of-type(1),th:nth-of-type(1) {
+    text-align: left;
+    width: 50%;
+}
+td:nth-of-type(2),th:nth-of-type(2) {
+    text-align: right;
+    width: 25%;
+}
+td:nth-of-type(3),th:nth-of-type(3) {
+    text-align: right;
+    width: 25%;
 }
 </style>
