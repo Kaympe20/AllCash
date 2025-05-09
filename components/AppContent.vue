@@ -3,7 +3,7 @@ import BudgetCard from './BudgetCard.vue'
 import { BudgetElement } from '../classes/BudgetElement'
 import { BudgetCardClass } from '../classes/BudgetCard'
 
-const budgetCards: BudgetCardClass[] = [
+let budgetCards = ref<BudgetCardClass[]>([
     new BudgetCardClass(
         "Income",
         true,
@@ -29,8 +29,7 @@ const budgetCards: BudgetCardClass[] = [
             new BudgetElement('Rent', 3000, 1000)
         ]
     )
-]
-
+])
 </script>
 
 <template>
