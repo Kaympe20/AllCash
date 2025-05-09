@@ -14,7 +14,26 @@ export default {
   components: {
     AppSidebar,
     AppContent
+  },
+  setup() {
+    useSeoMeta({
+      title: 'AllCash | FOSS Budgeting',
+      description: 'A completely free and open source alternative to EveryDollar, YNAB, or Mint.',
+    })
+    useHead({
+      htmlAttrs: {
+        lang: 'en'
+      },
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: 'https://images.icon-icons.com/3279/PNG/512/money_stack_icon_208061.png'
+        }
+      ]
+    })
   }
+  
 }
 </script>
 
