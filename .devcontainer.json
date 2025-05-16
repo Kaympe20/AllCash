@@ -13,6 +13,5 @@
     },
     "forwardPorts": [3000],
     "postCreateCommand": "bun install",
-    "postStartCommand": "bun dev",
-    "remoteUser": "node"
+    "postStartCommand": "bun dev"
 }
