@@ -3,33 +3,32 @@ import BudgetCard from './BudgetCard.vue'
 import { BudgetElement } from '../classes/BudgetElement'
 import { BudgetCardClass } from '../classes/BudgetCard'
 
-let budgetCards = ref<BudgetCardClass[]>([
-    new BudgetCardClass(
-        "Income",
-        true,
-        [
-            new BudgetElement('Salary', 5000, 3000),
-            new BudgetElement('Freelance', 2000, 1000),
-            new BudgetElement('Investments', 1500, 500),
-            new BudgetElement('Side Hustle', 800, 200),
-            new BudgetElement('Gifts', 300, 100)
-        ]
-    ),
-    new BudgetCardClass(
-        "Food",
-        false,
-        [
-            new BudgetElement('Groceries', 5000, 3000)
-        ]
-    ),
-    new BudgetCardClass(
-        "Housing",
-        false,
-        [
-            new BudgetElement('Rent', 3000, 1000)
-        ]
-    )
-])
+const budgetCards = ref<BudgetCardClass[]>([]);
+
+// Fetch budget data from API
+async function fetchBudgetData() {
+    try {
+        const response = await fetch('/api/getBudget');
+        const result = await response.json();
+        
+        if (result.success) {
+        // Convert data to BudgetCardClass instances
+        budgetCards.value = result.data.map((card: any) => {
+            const elements = card.budgetElements.map((element: any) => 
+            new BudgetElement(element.title, element.planned, element.remaining)
+            );
+            
+            return new BudgetCardClass(card.title, card.income, elements);
+        });
+        } else {
+        console.error('Failed to fetch budget data');
+        }
+    } catch (error) {
+        console.error('Error fetching budget data:', error);
+    }
+}
+
+onMounted(fetchBudgetData);
 </script>
 
 <template>
@@ -37,9 +36,9 @@ let budgetCards = ref<BudgetCardClass[]>([
         <BudgetCard
             v-for="(budgetCard, index) in budgetCards" :key="index"
             :budgetName="budgetCard.title"
-            :spent="false"
+            :spent="true"
             :budgetArray="budgetCard.budgetElements"
-            ></BudgetCard>
+        ></BudgetCard>
     </div>
 </template>
 

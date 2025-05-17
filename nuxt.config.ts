@@ -4,7 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/style.css'],
   nitro: {
-    plugins: ["~/server/plugins/mongodb.ts"],
+    plugins: [
+      "~/server/plugins/mongodb.ts",
+      "~/server/plugins/seedDatabase.ts"
+    ],
   },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI
