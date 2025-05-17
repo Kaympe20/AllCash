@@ -24,8 +24,7 @@ export default {
         return {
             menuItems: [
                 { name: 'Budget', link: '/' },
-                { name: 'Settings', link: '/'},
-                {name: 'test', link: "/"}
+                { name: 'Settings', link: '/settings'}
             ]
         }
     }
