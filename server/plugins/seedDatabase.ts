@@ -6,11 +6,7 @@ export default async (_nitroApp: Nitro) => {
     if (process.env.NODE_ENV !== 'development') return;
     
     try {
-        // Check if we already have budget cards
-        const count = await BudgetCard.countDocuments();
-        
-        // If database is empty, seed it
-        if (count === 0) {
+        if (await BudgetCard.countDocuments() === 0) {
         console.log('Seeding database with initial budget data...');
         
         const seedData = [
