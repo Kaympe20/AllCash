@@ -2,32 +2,38 @@
     <div style="text-align: center;">
         <div class="card">
             <table>
-                <tr>
-                    <th>{{ budgetName }}</th>
-                    <th>Planned</th>
-                    <th v-if="spent">Spent</th>
-                    <th v-else>Received</th>
-                </tr>
-                <tr class="divider-row">
-                    <td colspan="3"><hr /></td>
-                </tr>
-                <template v-for="(budget, index) in budgetArray" :key="index">
+                <thead>
                     <tr>
-                        <td>{{ budget.title }}</td>
-                        <td>{{ formatCurrency(budget.planned) }}</td>
-                        <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
-                        <td v-else>{{ formatCurrency(budget.remaining) }}</td>
+                        <th>{{ budgetName }}</th>
+                        <th>Planned</th>
+                        <th v-if="spent">Spent</th>
+                        <th v-else>Received</th>
                     </tr>
-                    <tr v-if="index < budgetArray.length" class="divider-row">
+                </thead>
+                <tbody>
+                    <tr class="divider-row">
                         <td colspan="3"><hr /></td>
                     </tr>
-                </template>
-                <tr class="total-row">
-                    <td><strong>Total</strong></td>
-                    <td><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
-                    <td v-if="spent"><strong>{{ formatCurrency(totalSpent) }}</strong></td>
-                    <td v-else><strong>{{ formatCurrency(totalReceived) }}</strong></td>
-                </tr>
+                    <template v-for="(budget, index) in budgetArray" :key="index">
+                        <tr>
+                            <td>{{ budget.title }}</td>
+                            <td>{{ formatCurrency(budget.planned) }}</td>
+                            <td v-if="spent">{{ formatCurrency(budget.planned - budget.remaining) }}</td>
+                            <td v-else>{{ formatCurrency(budget.remaining) }}</td>
+                        </tr>
+                        <tr v-if="index < budgetArray.length" class="divider-row">
+                            <td colspan="3"><hr /></td>
+                        </tr>
+                    </template>
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td><strong>Total</strong></td>
+                        <td><strong>{{ formatCurrency(totalPlanned) }}</strong></td>
+                        <td v-if="spent"><strong>{{ formatCurrency(totalSpent) }}</strong></td>
+                        <td v-else><strong>{{ formatCurrency(totalReceived) }}</strong></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>

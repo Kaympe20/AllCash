@@ -1,8 +1,5 @@
 <template>
-  <div id="app">
-    <AppSidebar></AppSidebar>
-    <AppContent></AppContent>
-  </div>
+  <NuxtLayout />
 </template>
 
 <script>
