@@ -6,6 +6,10 @@ import { fetchBudgetData } from '../functions/fetchBudgetData'
 
 const budgetCards = ref<BudgetCardClass[]>([]);
 
+const colorMode = useColorMode();
+console.log(colorMode);
+
+
 fetchBudgetData(budgetCards);
 </script>
 
