@@ -1,3 +1,9 @@
 <template>
-    
+    <table>
+        <tbody>
+            <tr>
+                <td>Settings</td>
+            </tr>
+        </tbody>
+    </table>
 </template>
