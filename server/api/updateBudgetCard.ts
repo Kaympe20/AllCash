@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
         const updatedCard = await BudgetCard.findByIdAndUpdate(
         id,
         updateData,
-        { new: true } // Return the updated document
+        { new: true }
         );
         
         if (!updatedCard) {
