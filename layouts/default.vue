@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <AppSidebar />
-        <NuxtPage />
+        <main class="main-content">
+            <NuxtPage />
+        </main>
     </div>
 </template>
 
@@ -16,5 +18,14 @@ import AppSidebar from '~/components/AppSidebar.vue'
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     min-height: 100vh;
+    display: flex;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    width: calc(100% - var(--sidebar-width) - 40px - 30px);
+    margin-left: calc(30px + var(--sidebar-width));
+    text-align: center;
+    box-sizing: border-box;
 }
 </style>

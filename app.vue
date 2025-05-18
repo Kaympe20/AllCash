@@ -28,10 +28,6 @@ export default {
 </script>
 
 <style>
-:root {
-  --sidebar-width: min(20vw, 200px);
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
