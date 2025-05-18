@@ -91,7 +91,7 @@ export default {
 <style scoped>
 .card {
     width: 80%;
-    min-height: 15vh;
+    min-height: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -104,7 +104,12 @@ table {
     width: 100%;
 }
 th {
+    font-size: max(1.5vw, 1.5vh);
+    font-weight: bolder;
+}
+th:nth-child(1) {
     font-size: max(2vw, 2vh);
+    font-weight: 800;
 }
 td {
     font-size: max(1.5vw, 1.5vh);
