@@ -3,7 +3,7 @@ import { BudgetElement } from '../classes/BudgetElement'
 
 export async function fetchBudgetData(budgetCards: Ref<BudgetCardClass[]>): Promise<void> {
     try {
-        const response = await fetch('/api/getBudget');
+        const response = await fetch('/api/budget');
         const result = await response.json();
         
         if (result.success) {
