@@ -3,15 +3,8 @@
 </template>
 
 <script>
-import AppSidebar from './components/AppSidebar.vue'
-import AppContent from './components/AppContent.vue'
-
 export default {
   name: 'App',
-  components: {
-    AppSidebar,
-    AppContent
-  },
   setup() {
     useSeoMeta({
       title: 'AllCash | FOSS Budgeting',
