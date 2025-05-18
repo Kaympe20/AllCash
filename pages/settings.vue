@@ -1,9 +1,5 @@
 <template>
-    <table>
-        <tbody>
-            <tr>
-                <td>Settings</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="card">
+        <h1>Settings</h1>
+    </div>
 </template>
