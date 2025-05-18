@@ -91,7 +91,7 @@ export default {
 <style scoped>
 .card {
     width: 80%;
-    min-height: 15vh;
+    min-height: 50px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
