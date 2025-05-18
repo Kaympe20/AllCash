@@ -1,4 +1,4 @@
-import { BudgetCard } from '../models/Budget';
+import { BudgetCard } from '../../models/Budget';
 
 export default defineEventHandler(async (event) => {
     try {
