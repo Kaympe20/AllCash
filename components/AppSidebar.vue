@@ -56,7 +56,6 @@ export default {
     list-style: none;
     margin: 20px auto;
     width: 95%;
-    border-radius: 15px;
     background-color: white;
     aspect-ratio: 3/1;
     display: flex;
@@ -66,6 +65,7 @@ export default {
     color: black;
     font-size: 1.5em;
     transition-duration: 0.4s;
+    border-radius: 5px;
 }
 .sidebar-item:hover {
     background-color: lightgray;
