@@ -8,12 +8,12 @@
 
         </div>
         <div class="sidebar-menu">
-            <a v-for="(item, index) in menuItems" :key="index"
+            <nuxt-link v-for="(item, index) in menuItems" :key="index"
                 class="sidebar-item"
-                :href="item.link"
+                :to="item.link"
             >
                 {{ item.name }}
-            </a>
+            </nuxt-link>
         </div>
     </div>
 </template>
