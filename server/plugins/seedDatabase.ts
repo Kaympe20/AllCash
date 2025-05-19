@@ -36,27 +36,6 @@ export default async (_nitroApp: Nitro) => {
                 budgetElements: [
                     { title: 'Rent', planned: 3000, remaining: 1000 }
                 ]
-                },
-                {
-                title: "Housing",
-                income: false,
-                budgetElements: [
-                    { title: 'Rent', planned: 3000, remaining: 1000 }
-                ]
-                },
-                {
-                title: "Housing",
-                income: false,
-                budgetElements: [
-                    { title: 'Rent', planned: 3000, remaining: 1000 }
-                ]
-                },
-                {
-                title: "Housing",
-                income: false,
-                budgetElements: [
-                    { title: 'Rent', planned: 3000, remaining: 1000 }
-                ]
                 }
             ];
             
