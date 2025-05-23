@@ -36,7 +36,7 @@ export default {
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
-    background-color: lightblue;
+    background-color: rgb(134, 164, 175);
     padding: 20px;
     position: fixed;
     top: 0;
