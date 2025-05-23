@@ -11,6 +11,7 @@
             <nuxt-link v-for="(item, index) in menuItems" :key="index"
                 class="sidebar-item"
                 :to="item.link"
+                :class="{ active: $route.path === item.link }"
             >
                 {{ item.name }}
             </nuxt-link>
@@ -70,6 +71,9 @@ export default {
 .sidebar-item:hover {
     background-color: lightgray;
 }
+.sidebar-item.active {
+    background-color: rgb(173, 196, 219);
+}
 .dark-mode .sidebar {
     background-color: #383838;
     color: white;
@@ -82,5 +86,8 @@ export default {
     cursor: pointer;
     background-color: rgb(66, 75, 83);
     color: white;
+}
+.dark-mode .sidebar-item.active {
+    background-color: rgb(44, 49, 55);
 }
 </style>
