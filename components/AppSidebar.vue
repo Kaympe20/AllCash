@@ -4,7 +4,7 @@
         <img src="/assets/logo draft.png" alt="Logo" class="logo">
         <hr>
         <h1>AllCash</h1>
-        <p>The <i>only</i> FOSS EveryDollar Alternative</p>
+        <p><s>The only</s> <s>The first</s> <s>The best</s> A FOSS EveryDollar Alternative</p>
 
         </div>
         <div class="sidebar-menu">
