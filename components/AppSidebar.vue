@@ -70,4 +70,17 @@ export default {
 .sidebar-item:hover {
     background-color: lightgray;
 }
+.dark-mode .sidebar {
+    background-color: #383838;
+    color: white;
+}
+.dark-mode .sidebar-item:hover {
+    background-color: #505050;
+}
+.dark-mode .sidebar-item {
+    border: none;
+    cursor: pointer;
+    background-color: rgb(66, 75, 83);
+    color: white;
+}
 </style>
