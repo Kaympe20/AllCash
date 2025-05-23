@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-header">
-        <img src="https://images.icon-icons.com/3279/PNG/512/money_stack_icon_208061.png" alt="Logo" class="logo">
+        <img src="/assets/logo draft.png" alt="Logo" class="logo">
         <hr>
         <h1>AllCash</h1>
         <p>The <i>only</i> FOSS EveryDollar Alternative</p>
