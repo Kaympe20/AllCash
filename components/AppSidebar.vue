@@ -36,7 +36,6 @@ export default {
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
-    background-color: rgb(134, 164, 175);
     padding: 20px;
     position: fixed;
     top: 0;
@@ -57,21 +56,27 @@ export default {
     list-style: none;
     margin: 20px auto;
     width: 95%;
-    background-color: white;
     aspect-ratio: 3/1;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: black;
     font-size: 1.5em;
     transition-duration: 0.4s;
     border-radius: 5px;
 }
-.sidebar-item:hover {
+.light-mode .sidebar {
+    background-color: rgb(134, 164, 175);
+    color: black;
+}
+.light-mode .sidebar-item:hover {
     background-color: lightgray;
 }
-.sidebar-item.active {
+.light-mode .sidebar-item {
+    background-color: white;
+    color: black;
+}
+.light-mode .sidebar-item.active {
     background-color: rgb(173, 196, 219);
 }
 .dark-mode .sidebar {

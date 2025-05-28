@@ -2,7 +2,6 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #d3e7ff;
 }
 .card {
     width: 80%;
@@ -11,11 +10,17 @@ body {
     margin-right: auto;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white;
     border-radius: 5px;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
-
+.light-mode body {
+    background-color: #d3e7ff;
+    color: black;
+}
+.light-mode .card {
+    background-color: white;
+    color: black;
+}
 .dark-mode body {
     background-color: #1a1a1a;
     color: white;
