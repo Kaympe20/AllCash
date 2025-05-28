@@ -1,8 +1,7 @@
 # AllCash
 
-## Background
 <details open>
-<summary></summary>
+<summary>Background</summary>
 
 > I came up with this idea as I was getting my dad to switch to open source tools to save money. I tried finding an open alternative to EveryDollar, and it stumped me. EveryDollar has so many users, yet there isn't even an open web-based budgeting app, let alone one that supports connecting with banking apps and/or receipts. **It is for this reason that I decided to make *AllCash*, the open source budgetting app to help you put all of your cash to work.**
 
@@ -15,6 +14,10 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 ## Setup
 
 Make sure to install dependencies:
+
+```bash
+docker pull mongodb/mongodb-community-server:latest
+```
 
 ```bash
 # npm
@@ -30,9 +33,21 @@ yarn install
 bun install
 ```
 
+## `.env` Setup
+
+Prefill `.env` with absolutely nessecary variables
+```bash
+echo "mongodb://mongo:27017/your-db" > .env
+```
+
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
+
+```bash
+docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
+```
 
 ```bash
 # npm
@@ -51,6 +66,10 @@ bun run dev
 ## Production
 
 Build the application for production:
+
+```bash
+docker run --name mongodb -p 27017:27017 -d mongodb/mongodb-community-server:latest
+```
 
 ```bash
 # npm
