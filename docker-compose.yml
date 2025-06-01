@@ -9,7 +9,7 @@ services:
       - MONGODB_URI=mongodb://mongodb:27017/allcash
 
   mongodb:
-    image: mongo:latest
+    image: mongodb/mongodb-community-server:latest
     ports:
       - "27017:27017"
     volumes:
