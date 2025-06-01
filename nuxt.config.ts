@@ -15,8 +15,5 @@ export default defineNuxtConfig({
     mongodbUri: process.env.MONGODB_URI
   },
 
-  modules: [
-    "@nuxtjs/color-mode",
-    "@sidebase/nuxt-auth"
-  ]
+  modules: ["@nuxtjs/color-mode"]
 })
