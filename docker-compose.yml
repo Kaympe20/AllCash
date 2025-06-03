@@ -5,8 +5,6 @@ services:
       - "3000:3000"
     depends_on:
       - mongodb
-    environment:
-      - MONGODB_URI=mongodb://mongodb:27017/allcash
 
   mongodb:
     image: mongodb/mongodb-community-server:latest
