@@ -5,6 +5,7 @@ services:
       - "3000:3000"
     depends_on:
       - mongodb
+    restart: unless-stopped
 
   mongodb:
     image: mongodb/mongodb-community-server:latest
@@ -14,6 +15,7 @@ services:
       - mongodb_data:/data/db
     environment:
       - MONGO_INITDB_DATABASE=allcash
+    restart: unless-stopped
 
 volumes:
   mongodb_data:
