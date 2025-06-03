@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: ghcr.io/kaympe20/allcash:main
     ports:
       - "3000:3000"
     depends_on:
