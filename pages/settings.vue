@@ -13,7 +13,7 @@
         <p>
             Running Build: 
             <template v-if="config.public.commit">
-                <a :href="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank">
+                <a :href="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank" class="commit-link">
                     {{ config.public.build }}
                 </a>
             </template>
@@ -48,5 +48,14 @@ console.log(colorMode.preference)
     }
     .theme-buttons button.active {
         background-color: slategray;
+    }
+    .dark-mode .commit-link:link {
+        color: lightskyblue;
+    }
+    .dark-mode .commit-link:visited {
+        color: #6d4b8d;
+    }
+    .dark-mode .commit-link:hover {
+        color: #ffffff;
     }
 </style>
