@@ -23,6 +23,7 @@ export default defineNuxtConfig({
 
     public: {
       build,
+      commit: process.env.NUXT_ENV_CURRENT_GIT_SHA !== undefined,
     }
   },
 

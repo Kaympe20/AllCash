@@ -10,7 +10,17 @@
                 {{ theme.charAt(0).toUpperCase() + theme.slice(1) }}
             </button>
         </div>
-        <p>Running Build: {{ config.public.build }}</p>
+        <p>
+            Running Build: 
+            <template v-if="config.public.commit">
+                <a :href="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank">
+                    {{ config.public.build }}
+                </a>
+            </template>
+            <template v-else>
+                {{ config.public.build }}
+            </template>
+        </p>
     </div>
 </template>
 
