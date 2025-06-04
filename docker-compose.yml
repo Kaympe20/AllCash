@@ -1,21 +1,21 @@
 services:
   app:
-    build: .
+    image: ghcr.io/kaympe20/allcash:main
     ports:
       - "3000:3000"
     depends_on:
       - mongodb
-    environment:
-      - MONGODB_URI=mongodb://mongodb:27017/allcash
+    restart: unless-stopped
 
   mongodb:
-    image: mongo:latest
+    image: mongodb/mongodb-community-server:latest
     ports:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
     environment:
       - MONGO_INITDB_DATABASE=allcash
+    restart: unless-stopped
 
 volumes:
   mongodb_data:

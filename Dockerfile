@@ -1,15 +1,17 @@
-FROM node:20-alpine
+FROM oven/bun:alpine
 
 WORKDIR /app
 
 COPY package.json bun.lock ./
-RUN npm install
+RUN bun install
 
 COPY . .
 
-RUN npm run build
-
 ENV HOST=0.0.0.0
+ENV MONGODB_URI=mongodb://mongodb:27017/allcash
+
+RUN bun run build
+
 EXPOSE 3000
 
-CMD ["node", ".output/server/index.mjs"]
+CMD ["bun", ".output/server/index.mjs"]

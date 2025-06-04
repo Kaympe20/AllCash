@@ -3,10 +3,16 @@ import { BudgetCard } from "../models/Budget";
 
 export default async (_nitroApp: Nitro) => {
     //End if the instance is in production mode
+    /*
     if (process.env.NODE_ENV !== 'development') {
         console.log('Skipping budget seeding because instance is in production mode.');
         return;
     }
+    */
+
+    // There is currently no system in place to create cards so commenting the above is a temporary solution
+
+
     try {
         if (await BudgetCard.countDocuments() === 0) {
             console.log('Seeding budget database with initial budget data...');
