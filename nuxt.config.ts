@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const build =
   process.env.NODE_ENV === 'development'
-    ? 'Development Server'
+    ? 'Development'
     : process.env.NUXT_ENV_CURRENT_GIT_SHA
       ? process.env.NUXT_ENV_CURRENT_GIT_SHA
       : 'Error: build not available';
@@ -20,7 +20,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
-    build,
+
+    public: {
+      build,
+    }
   },
 
   modules: ["@nuxtjs/color-mode"]

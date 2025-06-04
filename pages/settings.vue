@@ -10,12 +10,13 @@
                 {{ theme.charAt(0).toUpperCase() + theme.slice(1) }}
             </button>
         </div>
-        <p>Running build {{ useRuntimeConfig().build }}</p>
+        <p>Running Build: {{ config.public.build }}</p>
     </div>
 </template>
 
 <script setup>
 const colorMode = useColorMode()
+const config = useRuntimeConfig()
 
 console.log(colorMode.preference)
 </script>
