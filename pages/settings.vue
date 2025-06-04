@@ -53,7 +53,7 @@ console.log(colorMode.preference)
         color: lightskyblue;
     }
     .dark-mode .commit-link:visited {
-        color: #6d4b8d;
+        color: #9662c7;
     }
     .dark-mode .commit-link:hover {
         color: #ffffff;
