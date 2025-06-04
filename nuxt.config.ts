@@ -1,4 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const build =
+  process.env.NODE_ENV === 'development'
+    ? 'Development Server'
+    : process.env.NUXT_ENV_CURRENT_GIT_SHA
+      ? process.env.NUXT_ENV_CURRENT_GIT_SHA
+      : 'Error: build not available';
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -12,7 +19,8 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    mongodbUri: process.env.MONGODB_URI
+    mongodbUri: process.env.MONGODB_URI,
+    build,
   },
 
   modules: [

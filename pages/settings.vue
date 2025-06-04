@@ -10,6 +10,7 @@
                 {{ theme.charAt(0).toUpperCase() + theme.slice(1) }}
             </button>
         </div>
+        <p>{{ $config.build }}</p>
     </div>
 </template>
 
