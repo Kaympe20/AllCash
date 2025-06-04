@@ -13,9 +13,9 @@
         <p>
             Running Build: 
             <template v-if="config.public.commit">
-                <a :href="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank" class="commit-link">
+                <NuxtLink :to="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank" class="commit-link">
                     {{ config.public.build }}
-                </a>
+                </NuxtLink>
             </template>
             <template v-else>
                 {{ config.public.build }}
