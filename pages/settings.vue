@@ -10,7 +10,17 @@
                 {{ theme.charAt(0).toUpperCase() + theme.slice(1) }}
             </button>
         </div>
-        <p>Running Build: {{ config.public.build }}</p>
+        <p>
+            Running Build: 
+            <template v-if="config.public.commit">
+                <NuxtLink :to="`https://github.com/kaympe20/allcash/commit/${config.public.build}`" target="_blank" class="commit-link">
+                    {{ config.public.build }}
+                </NuxtLink>
+            </template>
+            <template v-else>
+                {{ config.public.build }}
+            </template>
+        </p>
     </div>
 </template>
 
@@ -38,5 +48,14 @@ console.log(colorMode.preference)
     }
     .theme-buttons button.active {
         background-color: slategray;
+    }
+    .dark-mode .commit-link:link {
+        color: lightskyblue;
+    }
+    .dark-mode .commit-link:visited {
+        color: #9662c7;
+    }
+    .dark-mode .commit-link:hover {
+        color: #ffffff;
     }
 </style>

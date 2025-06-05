@@ -8,13 +8,13 @@
 
         </div>
         <div class="sidebar-menu">
-            <nuxt-link v-for="(item, index) in menuItems" :key="index"
+            <NuxtLink v-for="(item, index) in menuItems" :key="index"
                 class="sidebar-item"
                 :to="item.link"
                 :class="{ active: $route.path === item.link }"
             >
                 {{ item.name }}
-            </nuxt-link>
+            </NuxtLink>
         </div>
     </div>
 </template>
