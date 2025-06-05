@@ -20,6 +20,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
+    authSecret: process.env.AUTH_SECRET,
 
     public: {
       build,
@@ -30,5 +31,12 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/color-mode",
     "@sidebase/nuxt-auth"
-  ]
+  ],
+
+  auth: {
+    provider: {
+      type: 'authjs',
+      defaultProvider: 'credentials',
+    }
+  }
 })
