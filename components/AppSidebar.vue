@@ -26,6 +26,7 @@ export default {
             menuItems: [
                 { name: 'Budget', link: '/' },
                 { name: 'Settings', link: '/settings'},
+                { name: 'Auth', link: '/sign-in' },
             ]
         }
     }
