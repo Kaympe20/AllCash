@@ -1,9 +1,6 @@
 <template>
     <div>
         <p>Sign-In Options:</p>
-        <button @click="signIn('github')">
-            Github
-        </button>
         <button @click="signIn('credentials', demoCredentials)">
             Username and Password
         </button>
