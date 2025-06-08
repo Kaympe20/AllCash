@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-header">
-        <img src="/assets/logo draft.png" alt="Logo" class="logo">
+        <img src="https://hc-juice.s3.amazonaws.com/omg-moments/1748745715065-homestuckalllcash.png" alt="Logo" class="logo">
         <hr>
         <h1>AllCash</h1>
         <p><s>The only</s> <s>The first</s> <s>The best</s> A FOSS EveryDollar Alternative</p>
