@@ -38,12 +38,9 @@ export default {
 <style scoped>
 
 .sidebar {
-    width: min(20vw, 200px);
-    height: 100vh;
-    padding: 20px;
+    width: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
     text-align: center;
     border-right: rgb(66, 67, 73) 6px solid;
     

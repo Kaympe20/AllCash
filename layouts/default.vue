@@ -1,14 +1,24 @@
 <template>
     <div id="app">
-        <AppSidebar />
+        <div v-if="$device.isDesktop">
+            <AppSidebar />
         <main class="main-content">
             <NuxtPage />
         </main>
+        </div>
+        <div v-else>
+            <MobileAppSidebar />
+            <main class="mobile-main-content">
+            <NuxtPage />
+            </main>
+        </div>
+
     </div>
 </template>
 
 <script setup lang="ts">
 import AppSidebar from '~/components/AppSidebar.vue'
+import MobileAppSidebar from '~/components/MobileAppSidebar.vue'
 </script>
 
 <style>
@@ -17,7 +27,6 @@ import AppSidebar from '~/components/AppSidebar.vue'
 }
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
-    min-height: 100vh;
     display: flex;
 }
 .main-content {
@@ -25,6 +34,13 @@ import AppSidebar from '~/components/AppSidebar.vue'
     padding: 20px;
     width: calc(100% - var(--sidebar-width) - 40px - 30px);
     margin-left: calc(30px + var(--sidebar-width));
+    text-align: center;
+    box-sizing: border-box;
+}
+.mobile-main-content {
+    flex: 1;
+    padding: 20px;
+    width: 100vh;
     text-align: center;
     box-sizing: border-box;
 }
