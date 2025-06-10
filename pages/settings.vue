@@ -1,4 +1,5 @@
 <template>
+    <NuxtLayout :name="$device.isMobile ? 'mobile' : 'default'">
     <div class="card">
         <h1>Settings</h1>
         <div class="theme-buttons">
@@ -22,6 +23,7 @@
             </template>
         </p>
     </div>
+    </NuxtLayout>
 </template>
 
 <script setup>
@@ -29,6 +31,10 @@ const colorMode = useColorMode()
 const config = useRuntimeConfig()
 
 console.log(colorMode.preference)
+
+definePageMeta({
+    layout: 'mobile'
+})
 </script>
 
 <style scoped>

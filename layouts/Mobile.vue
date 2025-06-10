@@ -1,14 +1,14 @@
 <template>
-    <div id="app">
-            <AppSidebar />
         <main class="main-content">
             <NuxtPage />
         </main>
-    </div>
+    <footer>
+        <MoblieAppSidebar/>
+    </footer>
 </template>
 
 <script setup>
-import AppSidebar from '~/components/AppSidebar.vue'
+import MoblieAppSidebar from '~/components/MobileAppSidebar.vue'
 </script>
 
 <style>

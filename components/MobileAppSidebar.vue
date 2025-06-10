@@ -5,8 +5,6 @@
             
                 <img src="https://hc-juice.s3.amazonaws.com/omg-moments/1748745715065-homestuckalllcash.png" alt="Logo" class="logo">
             <hr>
-            <h1>AllCash</h1>
-            <p><s>The only</s> <s>The first</s> <s>The best</s> A FOSS EveryDollar Alternative</p>
 
             </div>
             <div class="sidebar-menu">
@@ -44,14 +42,6 @@ export default {
     text-align: center;
     border-right: rgb(66, 67, 73) 6px solid;
     
-}
-.mobile-sidebar{
-    width: 100vh;
-    height: 30px;
-    position: fixed;
-    bottom: -1;
-    text-align: center;
-    border-right: rgb(66, 67, 73) 6px solid;
 }
 
 .logo {

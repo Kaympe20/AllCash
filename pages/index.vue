@@ -7,6 +7,7 @@ import { fetchBudgetData } from '../functions/fetchBudgetData'
 const budgetCards = ref<BudgetCardClass[]>([]);
 
 fetchBudgetData(budgetCards);
+
 </script>
 
 <template>
