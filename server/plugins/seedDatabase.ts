@@ -1,5 +1,5 @@
 import { Nitro } from "nitropack";
-import { BudgetCard } from "../models/Budget";
+import { BudgetCard } from "../models/User";
 
 export default async (_nitroApp: Nitro) => {
     //End if the instance is in production mode
