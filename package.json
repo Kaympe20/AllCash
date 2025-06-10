@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "NUXT_ENV_CURRENT_GIT_SHA=`git rev-parse --short HEAD` nuxt build",
-    "dev": "nuxt dev",
+    "dev": "AUTH_SECRET=`openssl rand -base64 32` nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
