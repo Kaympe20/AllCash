@@ -32,9 +32,6 @@ const config = useRuntimeConfig()
 
 console.log(colorMode.preference)
 
-definePageMeta({
-    layout: 'mobile'
-})
 </script>
 
 <style scoped>

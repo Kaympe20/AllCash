@@ -1,12 +1,6 @@
 <template>
     <div v-if="$device.isDesktop">
         <div class="sidebar">
-            <div class="sidebar-header">
-            
-                <img src="https://hc-juice.s3.amazonaws.com/omg-moments/1748745715065-homestuckalllcash.png" alt="Logo" class="logo">
-            <hr>
-
-            </div>
             <div class="sidebar-menu">
                 <NuxtLink v-for="(item, index) in menuItems" :key="index"
                     class="sidebar-item"
@@ -37,17 +31,11 @@ export default {
 
 .sidebar {
     width: 100vh;
-    position: fixed;
+    position: grid;
     top: 0;
     text-align: center;
     border-right: rgb(66, 67, 73) 6px solid;
     
-}
-
-.logo {
-    max-width: 80%;
-    max-height: 20vh;
-    margin: 0 auto;
 }
 .sidebar-menu {
     padding-right: 0;
@@ -55,16 +43,15 @@ export default {
 }
 .sidebar-item {
     list-style: none;
-    margin: 20px auto;
-    width: 95%;
-    aspect-ratio: 3/1;
+    margin-right: 5px;
+    width: 30%;
+    aspect-ratio: 1/3;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 0.5em;
     transition-duration: 0.4s;
-    border-radius: 5px;
 }
 .light-mode .sidebar {
     background-color: rgb(134, 164, 175);

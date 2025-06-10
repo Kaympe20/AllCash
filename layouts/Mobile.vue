@@ -1,14 +1,15 @@
 <template>
-        <main class="main-content">
+        <main class="mobile-main-content">
             <NuxtPage />
         </main>
-    <footer>
-        <MoblieAppSidebar/>
+    <footer >
+        <AppSidebar/>
     </footer>
 </template>
 
 <script setup>
 import MoblieAppSidebar from '~/components/MobileAppSidebar.vue'
+import AppSidebar from '~/components/AppSidebar.vue'
 </script>
 
 <style>
@@ -32,5 +33,9 @@ import MoblieAppSidebar from '~/components/MobileAppSidebar.vue'
     padding-top: 20px;
     width: 100vh;
     text-align: center;
+}
+.mobile-sidebar{
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 </style>
