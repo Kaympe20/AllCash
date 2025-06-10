@@ -18,7 +18,7 @@ export default {
         {
           rel: 'icon',
           type: 'image/png',
-          href: 'https://images.icon-icons.com/3279/PNG/512/money_stack_icon_208061.png'
+          href: 'https://hc-juice.s3.amazonaws.com/omg-moments/1748745715065-homestuckalllcash.png'
         }
       ]
     })
