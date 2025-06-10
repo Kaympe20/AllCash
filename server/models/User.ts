@@ -24,8 +24,8 @@ const defaultBudgetCard = [
         budgetElements: [
             {
                 title: "Salary",
-                planned: 100,
-                remaining: 100,
+                planned: 5000,
+                remaining: 2000,
                 order: 0
             }
         ]
