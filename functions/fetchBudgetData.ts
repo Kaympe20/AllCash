@@ -10,7 +10,7 @@ export async function fetchBudgetData(budgetCards: Ref<BudgetCardClass[]>): Prom
             return;
         }
         
-        if (data.value && 'success' in data.value && data.value.success) {
+        if (data.value && typeof data.value === 'object' && data.value !== null && 'success' in data.value && data.value.success) {
             // Check if 'data' property exists in the response
             if ('data' in data.value && Array.isArray(data.value.data)) {
                 // Convert data to BudgetCardClass instances
