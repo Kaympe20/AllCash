@@ -1,11 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const build =
-  process.env.NODE_ENV === 'development'
-    ? 'Development'
-    : process.env.NUXT_ENV_CURRENT_GIT_SHA
-      ? process.env.NUXT_ENV_CURRENT_GIT_SHA
-      : 'Error: build not available';
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -23,7 +16,12 @@ export default defineNuxtConfig({
     authSecret: process.env.AUTH_SECRET,
 
     public: {
-      build,
+      build: 
+        process.env.NODE_ENV === 'development'
+          ? 'Development'
+          : process.env.NUXT_ENV_CURRENT_GIT_SHA
+            ? process.env.NUXT_ENV_CURRENT_GIT_SHA
+            : 'Error: build not available',
       commit: process.env.NUXT_ENV_CURRENT_GIT_SHA !== undefined,
     }
   },
