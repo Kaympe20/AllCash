@@ -29,3 +29,21 @@ body {
     background-color: #2a2a2a;
     color: white;
 }
+
+.dark-mode * {
+    color: white;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+.light-mode .button {
+    background-color: white;
+}
+.dark-mode .button {
+    background-color: rgb(66, 75, 83);
+}
