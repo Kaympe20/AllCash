@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
     authSecret: process.env.AUTH_SECRET,
+    workFactor: process.env.WORK_FACTOR 
+      ? parseInt(process.env.WORK_FACTOR)
+      : 10,
 
     public: {
       build: 
