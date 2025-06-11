@@ -2,9 +2,7 @@
         <main class="mobile-main-content">
             <NuxtPage />
         </main>
-    <footer >
         <AppSidebar/>
-    </footer>
 </template>
 
 <script setup>
