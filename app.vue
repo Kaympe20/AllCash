@@ -2,7 +2,7 @@
   <NuxtLayout />
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'App',
   setup() {
@@ -23,7 +23,6 @@ export default {
       ]
     })
   }
-  
 }
 </script>
 
