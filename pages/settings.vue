@@ -24,7 +24,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const colorMode = useColorMode()
 const config = useRuntimeConfig()
 
