@@ -1,5 +1,7 @@
 import { NuxtAuthHandler } from '#auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
+import { User } from '~/server/models/User'
+import bcrypt from 'bcrypt'
 
 export default NuxtAuthHandler({
     secret: useRuntimeConfig().authSecret,
@@ -10,14 +12,32 @@ export default NuxtAuthHandler({
                 username: { label: 'Username', type: 'text', placeholder: 'Username' },
                 password: { label: 'Password', type: 'password', placeholder: 'Password' },
             },
-            authorize: async (credentials) => {
+            authorize: async (credentials, req) => {
                 if (
                     credentials?.username === 'admin' &&
                     credentials?.password === 'password'
                 ) {
                     return { id: '1', name: 'Admin', email: 'admin@example.com' }
                 }
-                return null
+
+                const user = await User.findOne({username: credentials?.username}).exec();
+
+                if (!credentials?.username || !credentials?.password) {
+                    return null;
+                }
+
+                if (!user) {
+                    return null;
+                }
+
+                if (await bcrypt.compare(credentials.password, user.passwordHash)) {
+                    return {
+                        id: user._id.toString(),
+                        username: user.username,
+                    };
+                }
+                
+                return null;
             },
         })
     ],
