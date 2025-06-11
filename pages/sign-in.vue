@@ -13,7 +13,7 @@
 
         <hr>
 
-        <button @click="() => signOut" class="button">
+        <button @click="signOut()" class="button">
             Sign Out
         </button>
     </div>
@@ -27,7 +27,8 @@ import { signOut } from 'next-auth/react';
         auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/' },
     })
 
-    const { signIn , status} = useAuth();
+    const { signIn } = useAuth();
+    let { status } = useAuth();
 
     const userCredentials = ref({
         username: '',
