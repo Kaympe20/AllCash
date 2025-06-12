@@ -11,8 +11,13 @@ export default defineEventHandler(async (event) => {
             passwordHash: await bcrypt.hash(body.password, 10),
         });
 
+        console.log('User created successfully:', body.username);
         return { success: true };
-    } catch (error) {
+    } catch (error: any) {
+        if (error.code === 11000) {
+            return { success: false, error: 'Username or email already exists.' };
+        }
+
         console.error('Error during sign-up:', error);
         return { success: false, error: error };
     }
