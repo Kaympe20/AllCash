@@ -21,6 +21,9 @@
         <button @click="signUp()" class="button">
             Sign Up
         </button>
+
+        <p v-if="success.success === true" style="color: green;">Sign Up Successful!</p>
+        <p v-else-if="success.success === false" style="color: red;">Sign Up Failed! Error: {{ success.error }}</p>
     </div>
 </template>
 
@@ -43,14 +46,31 @@
         email: '',
     });
 
+    let success = ref({
+        success: null as boolean | null,
+        error: ''
+    });
+
     async function signUp() {
         try {
             const response = await useFetch('/api/sign-up', {
                 method: 'POST',
                 body: userSignUpCredentials.value,
             });
+
+            success.value.success = response.data.value?.success || false;
+            
+            if (!success.value.success) {
+                success.value.error = response.data.value && 'error' in response.data.value 
+                    ? String(response.data.value.error) 
+                    : 'Unknown error occurred';
+                return;
+            }
+
+            return;
         } catch (error) {
             console.error('Sign Up Error:', error);
+            return;
         }
     }
 </script>
