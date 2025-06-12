@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - AUTH_SECRET=<CHANGE_ME>
+    restart: unless-stopped
+
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=allcash
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
