@@ -15,11 +15,16 @@
             >
                 {{ item.name }}
             </NuxtLink>
+            <button class="sidebar-item" @click="signOut()">
+                Sign Out
+            </button>
         </div>
     </div>
 </template>
 
 <script lang="ts">
+import { signOut } from 'next-auth/react';
+
 export default {
     data() {
         return {
@@ -28,6 +33,11 @@ export default {
                 { name: 'Settings', link: '/settings'},
                 { name: 'Auth', link: '/sign-in' },
             ]
+        }
+    },
+    methods: {
+        signOut() {
+            return signOut();
         }
     }
 }

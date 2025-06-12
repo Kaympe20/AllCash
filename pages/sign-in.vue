@@ -7,22 +7,24 @@
         <input type="text" placeholder="Username" v-model="userSignInCredentials.username">
         <input type="password" placeholder="Password" v-model="userSignInCredentials.password">
 
-        <button @click="signIn('credentials', userCredentials)" class="button">
+        <button @click="signIn('credentials', userSignInCredentials)" class="button">
             Sign In
         </button>
 
         <hr>
+        <h1>Sign Up</h1>
 
-        <button @click="signOut()" class="button">
-            Sign Out
+        <input type="email" placeholder="Email" v-model="userSignUpCredentials.email">
+        <input type="text" placeholder="Username" v-model="userSignUpCredentials.username">
+        <input type="password" placeholder="Password" v-model="userSignUpCredentials.password">
+
+        <button @click="signUp()" class="button">
+            Sign Up
         </button>
     </div>
 </template>
 
 <script setup lang="ts">
-import { signOut } from 'next-auth/react';
-
-
     definePageMeta({
         auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/' },
     })
@@ -34,6 +36,23 @@ import { signOut } from 'next-auth/react';
         username: '',
         password: '',
     });
+
+    const userSignUpCredentials = ref({
+        username: '',
+        password: '',
+        email: '',
+    });
+
+    async function signUp() {
+        try {
+            const response = await useFetch('/api/sign-up', {
+                method: 'POST',
+                body: userSignUpCredentials.value,
+            });
+        } catch (error) {
+            console.error('Sign Up Error:', error);
+        }
+    }
 </script>
 
 <style scope>
