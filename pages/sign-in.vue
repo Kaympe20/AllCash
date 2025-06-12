@@ -4,8 +4,8 @@
 
         <p>Authenticated? {{ status }}</p>
 
-        <input type="text" placeholder="Username" v-model="userCredentials.username">
-        <input type="password" placeholder="Password" v-model="userCredentials.password">
+        <input type="text" placeholder="Username" v-model="userSignInCredentials.username">
+        <input type="password" placeholder="Password" v-model="userSignInCredentials.password">
 
         <button @click="signIn('credentials', userCredentials)" class="button">
             Sign In
@@ -30,7 +30,7 @@ import { signOut } from 'next-auth/react';
     const { signIn } = useAuth();
     let { status } = useAuth();
 
-    const userCredentials = ref({
+    const userSignInCredentials = ref({
         username: '',
         password: '',
     });
