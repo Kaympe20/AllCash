@@ -53,12 +53,12 @@
 
     async function signUp() {
         try {
-            const response = await useFetch('/api/sign-up', {
+            const response = await useFetch<{ success: boolean, error?: string }>('/api/sign-up', {
                 method: 'POST',
                 body: userSignUpCredentials.value,
             });
 
-            success.value.success = response.data.value?.success || false;
+            success.value.success = response.data.value?.success ?? false;
             
             if (!success.value.success) {
                 success.value.error = response.data.value && 'error' in response.data.value 
