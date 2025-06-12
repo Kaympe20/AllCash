@@ -9,8 +9,7 @@ export default defineEventHandler(async (event) => {
             username: body.username,
             email: body.email,
             passwordHash: await bcrypt.hash(body.password, 10),
-            budgetCards: [],
-        })
+        });
 
         return { success: true };
     } catch (error) {
