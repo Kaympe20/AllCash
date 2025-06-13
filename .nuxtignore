@@ -1,1 +1,3 @@
 website/
+*docker-compose.yml
+deployDev.py
