@@ -5,6 +5,8 @@ services:
       - "3000:3000"
     depends_on:
       - mongodb
+    environment:
+      - AUTH_SECRET=<CHANGE_ME>
     restart: unless-stopped
 
   mongodb:
