@@ -35,6 +35,7 @@ export default defineNuxtConfig({
   ],
 
   auth: {
+    baseURL: `${process.env.BASE_URL}/api/auth` || 'http://localhost:3000/api/auth',
     provider: {
       type: 'authjs',
       defaultProvider: 'credentials',
