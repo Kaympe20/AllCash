@@ -39,7 +39,12 @@ export default defineNuxtConfig({
     isEnabled: true,
     disableServerSideAuth: false,
     originEnvKey: 'AUTH_ORIGIN',
-    baseURL: 'https://allcash-auth-dev.kayla.hackclub.app/api/auth',
+    baseURL: 
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3000/api/auth'
+        : process.env.BASE_URL
+          ? `${process.env.BASE_URL}/api/auth`
+          : 'https://your-production-url.com/api/auth',
     provider: {
       type: 'authjs',
       defaultProvider: 'credentials',
