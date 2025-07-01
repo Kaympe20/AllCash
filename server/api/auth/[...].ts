@@ -1,5 +1,6 @@
 import { NuxtAuthHandler } from '#auth'
-import CredentialsProvider from 'next-auth/providers/credentials'
+import CredentialsProviderImport from 'next-auth/providers/credentials'
+const CredentialsProvider = CredentialsProviderImport.default
 import { User } from '~/server/models/User'
 import bcrypt from 'bcrypt'
 
