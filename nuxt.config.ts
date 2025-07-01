@@ -1,11 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const build =
-  process.env.NODE_ENV === 'development'
-    ? 'Development'
-    : process.env.NUXT_ENV_CURRENT_GIT_SHA
-      ? process.env.NUXT_ENV_CURRENT_GIT_SHA
-      : 'Error: build not available';
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -20,12 +13,41 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
+    authSecret: process.env.AUTH_SECRET,
+    workFactor: process.env.WORK_FACTOR 
+      ? parseInt(process.env.WORK_FACTOR)
+      : 10,
 
     public: {
-      build,
+      build: 
+        process.env.NODE_ENV === 'development'
+          ? 'Development'
+          : process.env.NUXT_ENV_CURRENT_GIT_SHA
+            ? process.env.NUXT_ENV_CURRENT_GIT_SHA
+            : 'Error: build not available',
       commit: process.env.NUXT_ENV_CURRENT_GIT_SHA !== undefined,
     }
   },
 
-  modules: ["@nuxtjs/color-mode"]
+  modules: [
+    "@nuxtjs/color-mode",
+    "@sidebase/nuxt-auth"
+  ],
+
+  auth: {
+//    baseURL: `${process.env.BASE_URL}/api/auth` || 'http://localhost:3000/api/auth',
+    isEnabled: true,
+    disableServerSideAuth: false,
+    originEnvKey: 'AUTH_ORIGIN',
+    baseURL: 
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3000/api/auth'
+        : process.env.BASE_URL
+          ? `${process.env.BASE_URL}/api/auth`
+          : 'https://your-production-url.com/api/auth',
+    provider: {
+      type: 'authjs',
+      defaultProvider: 'credentials',
+    }
+  }
 })

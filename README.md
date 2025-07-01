@@ -9,7 +9,15 @@
 
 <a href="https://slack.com/app_redirect?channel=U07HY92M9GA"><img src="https://hackatime-badge.hackclub.com/U07HY92M9GA/AllCash"></a>
 
+This project was my entirely first time doing any kind of web dev or operations with a database. In its current state, it pulls from a MongoDB database and sends that to the client via a REST API, and the client subsequently loops through the returned json to render the web cards. Most of the time of this project went into understanding auth and state management, which is currently working on the published version.
+
+In retrospect, web dev results in cool stuff, but it honestly isn't for me. I can grind time into it to produce a result, but I generally don't feel fulfilled at the end of the day or like I did something I'm really proud of.
+
+<details>
+<summary>Developing</summary>
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
 
 ## Setup
 
@@ -102,3 +110,4 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+</details>
